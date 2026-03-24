@@ -54,7 +54,7 @@ function week2Study()
 	</>);
 }
 
-function week2Work()
+function week2Assignment()
 {
 	const name = "한재승"
 	const welcomeMessage = "Welcome to my App!"
@@ -88,6 +88,6 @@ export default function Week2App()
 	return (<>
 		<h2>week2</h2>
 		<details><summary>study</summary>{week2Study()}</details>
-		<details><summary>work</summary>{week2Work()}</details>
+		<details><summary>assignment</summary>{week2Assignment()}</details>
 	</>)
 }

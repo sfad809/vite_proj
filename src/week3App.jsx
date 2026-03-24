@@ -41,7 +41,7 @@ function week3Study()
 	</>)
 }
 
-function week3Work()
+function week3Assignment()
 {
 	const name = "Han"; const age = 21; const major = "computer";
 	const hobbies = ['game', 'music']
@@ -70,6 +70,6 @@ export default function Week3App()
 	return (<>
 		<h2>week3</h2>
 		<details><summary>study</summary>{week3Study()}</details>
-		<details><summary>work</summary>{week3Work()}</details>
+		<details><summary>assignment</summary>{week3Assignment()}</details>
 	</>)
 }
