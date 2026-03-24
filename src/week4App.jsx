@@ -1,4 +1,8 @@
 import './App.css'
+import Book from './week4/Book'
+import GreetingCard from './week4/GreetingCard'
+import ColorButton from './week4/ColorButton'
+import VideoList from './week4/VideoList'
 
 /*
 ===== Component =====
@@ -37,14 +41,39 @@ virtual DOM
 	diffing
 */
 
-function week4Study()
+function Week4Study()
 {
+	return (<>
+		<Book title="ham" author="apt" price={13}/>
+		<Book title="egg" author="cls" price={8786}/>
+
+		<GreetingCard name="hans" msg="carry"/>
+		<GreetingCard name="caps" msg="awesome"/>
+
+		<ColorButton text="quaa" bgColor="aqua"/>
+		<ColorButton text="red" bgColor="red"/>
+
+		<VideoList videos= {[
+			{
+				title: "react master",
+				channel: "coding channel",
+				views: "0.1천"
+			},
+			{
+				title: "jsx introducing",
+				channel: "jsx official",
+				views: "1.2만"
+			}
+		]}/>
+	</>)
 }
 
 export default function Week4App()
 {
 	return (<>
 		<h2>week4</h2>
-		<details><summary>study</summary>{week4Study()}</details>
+		<details><summary>study</summary>
+			<Week4Study />
+		</details>
 	</>)
 }
