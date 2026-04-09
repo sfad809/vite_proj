@@ -1,6 +1,6 @@
 import './App.css'
 
-function week3Study()
+function Study()
 {
 	const q1 = <h1>Start React</h1>
 	const name = "jihoon"
@@ -41,7 +41,7 @@ function week3Study()
 	</>)
 }
 
-function week3Assignment()
+function Assignment()
 {
 	const name = "Han"; const age = 21; const major = "computer";
 	const hobbies = ['game', 'music']
@@ -67,9 +67,8 @@ function week3Assignment()
 
 export default function Week3App()
 {
-	return (<>
-		<h2>week3</h2>
-		<details><summary>study</summary>{week3Study()}</details>
-		<details><summary>assignment</summary>{week3Assignment()}</details>
-	</>)
+	return (<details><summary>week3</summary>
+		<Study />
+		<Assignment />
+	</details>)
 }

@@ -1,6 +1,6 @@
 import './App.css'
 
-function week2Study()
+function Study()
 {
 	// ===== ===== Modern JS ===== =====
 	// use arrow function
@@ -54,7 +54,7 @@ function week2Study()
 	</>);
 }
 
-function week2Assignment()
+function Assignment()
 {
 	const name = "한재승"
 	const welcomeMessage = "Welcome to my App!"
@@ -85,9 +85,8 @@ function week2Assignment()
 
 export default function Week2App()
 {
-	return (<>
-		<h2>week2</h2>
-		<details><summary>study</summary>{week2Study()}</details>
-		<details><summary>assignment</summary>{week2Assignment()}</details>
-	</>)
+	return (<details><summary>week2</summary>
+		<Study />
+		<Assignment />
+	</details>)
 }

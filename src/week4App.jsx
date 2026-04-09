@@ -41,7 +41,7 @@ virtual DOM
 	diffing
 */
 
-function Week4Study()
+function Study()
 {
 	return (<>
 		<Book title="ham" author="apt" price={13}/>
@@ -70,10 +70,7 @@ function Week4Study()
 
 export default function Week4App()
 {
-	return (<>
-		<h2>week4</h2>
-		<details><summary>study</summary>
-			<Week4Study />
-		</details>
-	</>)
+	return (<details><summary>week4</summary>
+		<Study />
+	</details>)
 }
