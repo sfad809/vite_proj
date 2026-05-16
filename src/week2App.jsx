@@ -58,9 +58,7 @@ function Assignment()
 {
 	const name = "한재승"
 	const welcomeMessage = "Welcome to my App!"
-	const favorites = [
-		'커피', '녹차', '홍차', '수달', '개'
-	]
+	const favorites = ['커피', '녹차', '홍차', '수달', '개']
 	let isLogin = false;
 	const doLogin = () => {
 		isLogin = !isLogin;
