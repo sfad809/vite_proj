@@ -1,9 +1,3 @@
-import './App.css'
-import Book from './week4/Book'
-import GreetingCard from './week4/GreetingCard'
-import ColorButton from './week4/ColorButton'
-import VideoList from './week4/VideoList'
-
 /*
 ===== Component =====
 	: minimal unit
@@ -34,16 +28,44 @@ rules :
 	parent to child (one direction)
 
 ===== DOM ===== (document object model)
-
 DOM : node hierachy like tree
 
 virtual DOM
 	diffing
 */
+import './App.css'
 
-function Study()
+function Book(props)
 {
 	return (<>
+		<h2>이 책의 제목은 {props.title} 입니다.</h2>
+		<p>이 책의 저자는 {props.author} 입니다.</p>
+		<p>이 책은 {props.price}원 입니다.</p>
+	</>)
+};
+
+function ColorButton({text, bgColor})
+{
+	return (<>
+		<button style={{ backgroundColor: bgColor, color:"white" }}>
+			{text}
+		</button>
+	</>)
+}
+
+function GreetingCard({name, msg})
+{
+	return (<>
+		<p>{name}님 {msg}</p>
+	</>)
+};
+
+export default function Week4App()
+{
+	return (
+	<details>
+		<summary>week4</summary>
+		
 		<Book title="ham" author="apt" price={13}/>
 		<Book title="egg" author="cls" price={8786}/>
 
@@ -52,25 +74,5 @@ function Study()
 
 		<ColorButton text="quaa" bgColor="aqua"/>
 		<ColorButton text="red" bgColor="red"/>
-
-		<VideoList videos= {[
-			{
-				title: "react master",
-				channel: "coding channel",
-				views: "0.1천"
-			},
-			{
-				title: "jsx introducing",
-				channel: "jsx official",
-				views: "1.2만"
-			}
-		]}/>
-	</>)
-}
-
-export default function Week4App()
-{
-	return (<details><summary>week4</summary>
-		<Study />
 	</details>)
 }

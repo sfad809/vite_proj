@@ -1,3 +1,4 @@
+// React Elements
 import './App.css'
 
 function Study()
@@ -67,7 +68,9 @@ function Assignment()
 
 export default function Week3App()
 {
-	return (<details><summary>week3</summary>
+	return (
+	<details>
+		<summary>week3</summary>
 		<Study />
 		<Assignment />
 	</details>)
