@@ -1,7 +1,7 @@
 import { useId } from 'react'
 import { useSlideshow } from '../hooks/useSlideshow.js'
 
-// otter/assets 폴더에 넣어 둔 이미지들을 빌드 시점에 모두 자동으로 불러옵니다.
+// assets 폴더에 넣어 둔 이미지들을 빌드 시점에 모두 자동으로 불러옵니다.
 const modules = import.meta.glob('../assets/*.{jpg,jpeg,png,webp,gif}', {
   eager: true,
   import: 'default',
@@ -21,7 +21,7 @@ export default function OtterGallery() {
   if (count === 0) {
     return (
       <p className="gallery-empty">
-        <code>src/otter/assets/</code> 폴더에 수달 사진을 넣으면 슬라이드쇼가 켜집니다.
+        <code>src/assets/</code> 폴더에 수달 사진을 넣으면 슬라이드쇼가 켜집니다.
       </p>
     )
   }
