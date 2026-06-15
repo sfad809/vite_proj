@@ -42,7 +42,7 @@ export function useSlideshow(items, { interval = 3500 } = {}) {
     }, interval)
 
     return () => clearInterval(timerRef.current)
-  }, [state.playing, count, interval])
+  }, [state.playing, state.index, count, interval])
 
   // 현재 보여줄 항목을 파생값으로 계산(범위를 벗어나면 안전하게 처리).
   const current = useMemo(

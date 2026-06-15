@@ -11,6 +11,8 @@ const photos = Object.entries(modules)
   .sort(([a], [b]) => a.localeCompare(b))
   .map(([path, src]) => ({ src, name: path.split('/').pop() }))
 
+export const hasOtterPhotos = photos.length > 0
+
 export default function OtterGallery() {
   const titleId = useId()
   const { index, playing, current, count, next, prev, go, toggle } = useSlideshow(photos, {
